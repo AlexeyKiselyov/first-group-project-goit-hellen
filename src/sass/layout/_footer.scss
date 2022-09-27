@@ -1,0 +1,125 @@
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include mq(tab) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0 42px 0;
+  }
+  @include mq(desk) {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 0 53px 0;
+  }
+}
+
+// ------------------------logo
+.footer__logo {
+  margin-bottom: 22px;
+  @include mq(tab) {
+    margin-bottom: 0;
+  }
+  @include mq(desk) {
+    margin-right: 290px;
+  }
+}
+.footer__logo-icon {
+  width: 80px;
+  height: 30px;
+  @include mq(tab) {
+    width: 128px;
+    height: 45px;
+  }
+}
+// ------------------------contact
+.footer__contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include mq(tab) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.footer__contact-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 28px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.08em;
+
+  color: var(--third-background-color);
+
+  @include mq(tab) {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 0;
+
+    &::after {
+      content: ' ';
+      border: 1px solid #b9b9b9;
+      margin-left: 20px;
+      margin-right: 20px;
+      height: 40px;
+    }
+  }
+  @include mq(desk) {
+    font-size: 30px;
+    line-height: 1.23;
+  }
+}
+.footer__contact-icon-box {
+  display: inline-flex;
+  margin-right: 10px;
+
+  @include mq(tab) {
+    margin-right: 20px;
+  }
+  @include mq(desk) {
+    margin-right: 30px;
+  }
+}
+.footer__contact-icon {
+  width: 20px;
+  height: 20px;
+  @include mq(tab) {
+    width: 24px;
+    height: 24px;
+  }
+  @include mq(desk) {
+    width: 30px;
+    height: 30px;
+  }
+}
+// ------------------------social
+.footer__contact-social {
+  display: inline-block;
+  margin-bottom: 30px;
+  @include mq(tab) {
+    margin-bottom: 0;
+  }
+}
+// ------------------------копирайтинг
+.footer__copirate {
+  background: var(--third-background-color);
+}
+.footer__copirate-container {
+  display: flex;
+  justify-content: center;
+  @include mq(tab) {
+    justify-content: flex-start;
+  }
+}
+.footer__copirate-text {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 2;
+
+  padding: 20px 0;
+  color: var(--pimary-text-color);
+}

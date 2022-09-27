@@ -1,0 +1,16 @@
+.bg--gradient{
+    margin-top: -1px;
+    width: 100%;
+    max-width: 1680px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--third-background-color);
+    background: linear-gradient(180deg,var(--third-background-color) 68.42%, var(--primary-background-color) 68.42%);
+    @include mq(tab){
+        background: linear-gradient(180deg, var(--third-background-color) 60.70%, var(--primary-background-color) 60.70%);
+    }
+    @include mq(desk){
+        background: linear-gradient(180deg, var(--third-background-color) 62%, var(--primary-background-color) 62%);
+        background-repeat:no-repeat;
+    }
+}

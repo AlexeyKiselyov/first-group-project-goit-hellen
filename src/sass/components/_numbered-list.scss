@@ -1,0 +1,75 @@
+.numbered-list{
+    background-color: var(--primary-background-color);
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    padding: 20px 27px;
+
+    counter-reset: problems-list;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;  
+    gap: 15px;
+    
+    &__decor::after{
+        font-size: 14px;
+        counter-increment: problems-list;                 
+        content:  "\2014" '0'counter(problems-list);
+        @include mq(tab){
+        }
+        @include mq(desk){
+            font-size: 20px;
+        }
+    }
+
+    @include mq(tab) {
+        padding: 28px 90px;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 68px;
+    }
+    @include mq(desk){
+        padding: 67px 113px;
+        row-gap: 30px;
+        column-gap: 40px;
+    }
+
+}
+
+.numbered-list__item{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.43;
+    color: var(--title-text-color);
+    flex-shrink: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    @include mq(tab){
+        flex-basis: 220px;
+    }
+    @include mq(desk){
+        flex-basis: 287px;
+        font-size: 20px;
+        line-height: 1.4;
+    }    
+}
+
+.numbered-list__item{
+    >span{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.08em;
+        color: var(--accent-color) ;  
+
+        
+        @include mq(desk){
+            line-height: 1.64;
+        }    
+    }
+}

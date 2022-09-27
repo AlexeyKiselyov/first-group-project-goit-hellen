@@ -1,0 +1,131 @@
+.mob-menu {
+    @include mq(not-desk) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 800;
+        
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        background-color: rgba(17, 21, 24, 0.9);
+
+        transform: translateY(-100%);
+        transition: opacity 250ms ease, visibility 250ms ease, background-color 300ms ease, transform 300ms ease;
+       
+        @include mq(tab-only) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        
+        &.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: initial;
+        transform: translateY(0);
+        }
+    }
+
+    @include mq(desk) {
+        display: none;
+    }
+}
+
+.menu-btn {
+    margin-left: auto;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+
+    @include mq(tab) {
+        margin-left: 40px;
+    }
+
+    @include mq(desk) {
+        display: none;
+    }
+
+    &.is-open {
+        z-index: 1000;
+    }
+}
+
+.menu-btn__icon-menu {
+    stroke: #000;
+    opacity: 1;
+    transition: stroke var(--shift);
+
+    .header--no-transparency & {
+        stroke: var(--secondary-text-color);
+    }
+
+    .menu-btn.is-open & {
+        opacity: 0;
+    }
+}
+
+.menu-btn__icon-close {
+    opacity: 0;
+
+    .menu-btn.is-open & {
+        opacity: 1;
+    }
+}
+
+.mob-menu__logo {
+    opacity: 0;
+    transition: opacity 200ms ease 300ms;
+    
+    .mob-menu.is-open & {
+        opacity: 1;
+        color: var(--secondary-text-color);
+    }
+}
+
+.mob-menu__list {
+    @include mq(not-desk) {
+        margin-top: 78px;
+        margin-left: 20px;
+    }
+
+    @include mq(tab) {
+        max-width: 332px;
+        margin: 117px auto 0;
+    }
+}
+
+.mob-menu__link {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+
+    color: var(--secondary-text-color);
+
+    @include mq(tab) {
+        font-size: 26px;
+    }
+
+    &:hover {
+        color: var(--accent-color);
+    }
+}
+
+.mob-menu__button {
+    display: block;
+    margin: 50px auto 0;
+    padding: 10px;
+
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    background-color: transparent;
+
+    @include mq(tab) {
+        display: none;
+    }
+}

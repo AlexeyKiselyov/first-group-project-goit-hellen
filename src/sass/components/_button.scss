@@ -1,0 +1,35 @@
+.button {
+  padding: 17px 10px 16px;
+  min-width: 260px;
+  height: 48px;
+
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.28;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  border: 1px solid transparent;
+
+  transition: var(--shift) background-color, var(--shift) color, var(--shift) border;
+  &:hover, &:focus{
+      background-color: var(--secondary-text-color);
+      color: var(--accent-color);
+      border: 1px solid var(--accent-color);
+  }
+
+  @include mq(desk) {
+    padding: 27px 10px 26px;
+    min-width: 354px;
+    height: 70px;
+
+    font-size: 14px;
+    line-height: 1.13;
+    letter-spacing: 0.14em;
+  }
+}

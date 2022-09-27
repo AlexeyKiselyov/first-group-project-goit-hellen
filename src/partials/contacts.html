@@ -1,0 +1,65 @@
+<section class="contacts" id="contacts">
+  <div class="container">
+    <h2 class="contacts__title">
+      Registration for a <span class="contacts__accent">free</span> phone
+      <span class="contacts__accent">consultation</span> on the nuances of
+      English UPE
+    </h2>
+    <h3 class="contacts__descr">
+      Leave a request for participation in a
+      <span class="contacts__accent">free lesson</span>.
+    </h3>
+    <h3 class="contacts__descr contacts__descr--last">
+      A consultant will contact you and answer your questions
+    </h3>
+
+    <form class="form" autocomplete="off">
+      <div
+        class="form__field"
+        data-aos="zoom-in-down"
+        data-aos-duration="400"
+        data-aos-delay="0"
+      >
+        <label class="form__label" for="name"></label>
+        <input
+          class="form__input"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Name&ast;"
+          required
+          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+          title="Username must be two words separated by space."
+        />
+      </div>
+      <div
+        class="form__field"
+        data-aos="zoom-in-down"
+        data-aos-duration="400"
+        data-aos-delay="100"
+      >
+        <label class="form__label" for="number"></label>
+        <input
+          class="form__input form__input--last"
+          type="tel"
+          name="number"
+          id="number"
+          placeholder="Phone&ast;"
+          required
+          pattern="^[0-9]+$"
+          title="The phone number must contain only numbers."
+        />
+      </div>
+
+      <button
+        class="contacts__button button"
+        type="submit"
+        data-aos="zoom-in-down"
+        data-aos-duration="400"
+        data-aos-delay="200"
+      >
+        i want a free lesson
+      </button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,114 @@
+.guarantee__container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.guarantee__title {
+  margin-bottom: 30px;
+
+  @include mq(desk) {
+    margin-bottom: 50px;
+  }
+}
+
+.guarantee__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 45px 20px;
+  min-width: 320px;
+  letter-spacing: 0;
+
+  background: var(--fourth-background-color);
+
+  @include mq(mob) {
+  }
+  @include mq(tab) {
+    padding: 30px 65px;
+    width: 100%;
+    gap: 20px;
+  }
+  @include mq(desk) {
+    padding: 50px 112px;
+  }
+}
+
+.guarantee__item {
+  position: relative;
+  padding: 0px 0 0px 35px;
+
+  font-size: 12px;
+  line-height: 1.66;
+  font-weight: 500;
+
+  color: var(--fifth-background-color);
+
+  // ----------------------псевдо элементы
+  &:before {
+    content: '';
+    position: absolute;
+
+    width: 15px;
+    height: 20px;
+
+    background: url('../images/campfire.svg');
+    background-size: contain;
+    left: 0;
+    top: 0;
+    @include mq(desk) {
+      width: 22px;
+      height: 30px;
+    }
+  }
+
+  &:after {
+    content: '';
+    display: inline;
+    width: 1px;
+    position: absolute;
+
+    top: 27px;
+    bottom: -12px;
+    left: 7px;
+
+    border-left: 1px dashed var(--pimary-text-color);
+    @include mq(desk) {
+      top: 36px;
+      bottom: -12px;
+      left: 10px;
+    }
+  }
+
+  &:last-child:after {
+    content: none;
+  }
+
+  // ----------------------адаптив
+  @include mq(tab) {
+    padding: 0px 0 0px 39px;
+    &::after {
+      height: 30px;
+    }
+  }
+
+  @include mq(desk) {
+    padding: 0px 0 0px 52px;
+    font-size: 20px;
+    line-height: 1.4;
+    &::after {
+      height: 40px;
+    }
+  }
+}
+
+.guarantee__item-icon {
+  margin-right: 30px;
+
+  width: 22px;
+  height: 30px;
+}
+
+.guarantee__item-text--color {
+  color: var(--accent-color);
+}

@@ -1,0 +1,45 @@
+.section--problems{
+    position: relative;
+    padding-top: 20px;  
+    @include mq(tab){
+        padding-top: 55px;
+    }
+    @include mq(desk){
+        padding-top: 100px;
+    }  
+}
+.problems{
+    position: relative;
+    z-index: 1;
+}
+
+/*================Заголовок============*/
+.title--problems{
+    width: 100%;
+    @include mq(tab){
+        width: 450px;
+    }
+    @include mq(desk){
+        width: 805px;
+    }
+}
+/*================Фононва іконка=================*/
+.problems__icon-canv{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 1;
+    margin: 0 auto;
+    background: transparent;
+    display: none;
+    @include mq(desk){
+        display: block;
+        width: 100%;
+        max-width: 1680px;
+        height: 61.9%;
+        background-image: url(../images/problems/problems-bg-fire.svg);
+        background-position: bottom right;
+        background-repeat:no-repeat;
+    }
+}

@@ -1,0 +1,205 @@
+// ------------------ hero
+.hero {
+  padding: 30px 0 70px 0;
+  background-color: transparent;
+
+  @include mq(tab) {
+    padding: 70px 0 70px 0;
+  }
+  @include mq(desk) {
+    padding: 30px 0 130px 0;
+  }
+
+  background-image: url(../images/hero/wave-bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: 10% -70px;
+
+  // --------------responsive adaptive for bg
+  @include mq(mob) {
+    background-position: 50% -70px;
+  }
+  @include mq(tab) {
+    background-position: 0 0;
+    background-image: url(../images/hero/wave-bg.svg);
+    background-size: 100%;
+  }
+
+  @media screen and (min-width: 1000px) {
+    background-position: 0 100%;
+  }
+
+  @media screen and (min-width: 1366px) {
+    background-position: 0 0;
+    background-size: 100%;
+  }
+  @media screen and (min-width: 1600px) {
+    background-position: 0 100%;
+    background-position: 0 -90px;
+  }
+  @media screen and (min-width: 1800px) {
+    background-position: 0 100%;
+    background-position: 0 -240px;
+  }
+  @media screen and (min-width: 1920px) {
+    background-position: 0 100%;
+    background-position: 0 -240px;
+  }
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq(tab) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include mq(tab) {
+    display: inline-block;
+    width: 320px;
+    margin-right: 18px;
+    padding-top: 4px;
+  }
+  @include mq(desk) {
+    width: 530px;
+    height: 421px;
+    padding-top: 55px;
+  }
+}
+.hero__title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+
+  margin-bottom: 8px;
+
+  @include mq(tab) {
+    font-size: 26px;
+    margin-bottom: 15px;
+    width: 320px;
+  }
+
+  @include mq(desk) {
+    font-size: 58px;
+    width: 530px;
+  }
+}
+// -----------------------description
+.hero__text-subtitle {
+  font-weight: 500;
+  color: var(--pimary-text-color);
+  line-height: 22px;
+  letter-spacing: 0.08em;
+
+  @include mq(desk) {
+    font-size: 20px;
+  }
+}
+
+.hero__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.57;
+  letter-spacing: 0.08em;
+  margin-bottom: 50px;
+  width: 260px;
+
+  color: var(--title-text-color);
+  @include mq(tab) {
+    margin-bottom: 45px;
+  }
+  @include mq(desk) {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 165%;
+    align-items: center;
+    letter-spacing: 0.08em;
+
+    width: 530px;
+  }
+}
+.hero__text-points {
+  color: var(--accent-color);
+}
+
+// ------------------------------button
+.hero__button {
+  margin-bottom: 54px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 260px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  @include mq(tab) {
+    margin-bottom: 0;
+  }
+}
+
+// -------------------------------image
+.hero__img {
+  display: flex;
+  position: relative;
+  width: 208px;
+  height: 178px;
+
+  @include mq(tab) {
+    width: 370px;
+    height: 315px;
+  }
+  @include mq(desk) {
+    width: 842px;
+    height: 718px;
+  }
+}
+
+.hero__img-bottom {
+  position: absolute;
+  width: 208px;
+  height: 150px;
+  top: 9.52px;
+  left: 0;
+
+  @include mq(tab) {
+    top: 17px;
+    left: 0;
+    width: 370px;
+    height: 264px;
+  }
+
+  @include mq(desk) {
+    top: 38px;
+    left: 0;
+    width: 842px;
+    height: 602px;
+  }
+}
+
+.hero__img-top {
+  position: absolute;
+  top: 0;
+  left: 20.08px;
+  width: 178px;
+  height: 178px;
+
+  @include mq(tab) {
+    top: 0;
+    left: 35px;
+    width: 316px;
+    height: 315px;
+  }
+  @include mq(desk) {
+    top: 0;
+    left: 82px;
+    width: 719px;
+    height: 718px;
+  }
+}

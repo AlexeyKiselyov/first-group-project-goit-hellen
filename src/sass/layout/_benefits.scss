@@ -1,0 +1,70 @@
+.benefits-section{
+    background-color: var(--third-background-color);
+    background: linear-gradient(180deg,var(--third-background-color) 60%, var(--primary-background-color) 60%);
+    @include mq(tab){
+    background: linear-gradient(180deg, var(--third-background-color) 55%, var(--primary-background-color) 55%);
+    }   
+    @include mq(desk){
+    background: linear-gradient(180deg, var(--third-background-color) 42%, var(--primary-background-color) 42%);
+    }
+}
+
+
+.benefits{
+    position: relative;
+    z-index: 1;
+    @include mq(tab){
+        padding-top: 55px;
+    }
+    @include mq(desk){
+        padding-top: 0;
+    } 
+}
+
+.benefits--title{
+    width: 180px;
+    margin-bottom: 30px;
+    @include mq(tab){
+        padding-top: 55px;
+        width: 688px;
+        text-align: center;
+    }
+    @include mq(desk){
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        margin: -1px;
+    }
+}
+
+.benefits__list{
+    padding: 35px 22px;
+    gap: 30px;
+    @include mq(tab){
+        padding: 40px 98px;
+        justify-content: center;
+    }
+    @include mq(desk){
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 57px 113px;
+        column-gap: 40px;
+        row-gap: 50px;
+    }
+}
+
+.benefits__item{
+    gap: 10px;
+    @include mq(tab){
+
+    }
+    @include mq(desk){
+        flex-basis: 336px;
+    }
+}

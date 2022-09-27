@@ -1,0 +1,107 @@
+.contacts {
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 55px 0px;
+
+  text-align: center;
+  background-color: var(--third-background-color);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  // mobile screen
+  background-image: url(../images/registration/registration__mob.png);
+  // mobile retina screen
+  @include mq(retina) {
+    background-image: url(../images/registration/registration__mob@2x.png);
+  }
+
+  @include mq(tab) {
+    margin-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 68px;
+
+    // tablet screen
+    background-image: url(../images/registration/registration__tab.png);
+    // tablet retina screen
+    @include mq(retina) {
+      background-image: url(../images/registration/registration__tab@2x.png);
+    }
+  }
+
+  @include mq(desk) {
+    margin-bottom: 52px;
+    padding-top: 100px;
+    padding-bottom: 62px;
+    max-width: 1680px;
+
+    // desktop screen
+    background-image: url(../images/registration/registration__desk.png);
+    // desktop retina screen
+    @include mq(retina) {
+      background-image: url(../images/registration/registration__desk@2x.png);
+    }
+  }
+}
+
+.contacts__title {
+  margin-bottom: 25px;
+
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+
+  @include mq(tab) {
+    margin-bottom: 50px;
+
+    font-size: 26px;
+  }
+
+  @include mq(desk) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 980px;
+
+    font-size: 46px;
+  }
+}
+
+.contacts__descr {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  color: var(--secondary-text-color);
+
+  @include mq(tab) {
+    font-size: 16px;
+  }
+
+  @include mq(desk) {
+    font-size: 30px;
+    line-height: 1.23;
+  }
+
+  &--last {
+    margin-bottom: 43px;
+
+    @include mq(tab) {
+      margin-bottom: 40px;
+    }
+
+    @include mq(desk) {
+      margin-bottom: 56px;
+    }
+  }
+}
+
+.contacts__accent {
+  color: var(--accent-color);
+}
+
+.contacts__button {
+  line-height: 1.21;
+}
